@@ -1,0 +1,11 @@
+{
+  "name": "mjs",
+  "version": "1.0.0",
+  "description": "mjs is web frame",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm install"
+  },
+  "author": "mjproc",
+  "license": "ISC"
+}
