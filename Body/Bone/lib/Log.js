@@ -32,7 +32,6 @@ class Log extends Base{
         let con = this.con || window.console ;
         if (con.error && this.getConfigByName('debug') > 1){
             if (con.error.apply){
-                con.trace();
                 con.error.apply(con, arguments);
             }else {
                 con.error(arguments[0]);
