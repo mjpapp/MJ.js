@@ -2,10 +2,12 @@ const path = require('path');
 module.exports = {
     //插件项
     plugins: [],
-    entry: "./harns/main.js",
+    entry: [
+        "./textMjp.js",
+    ],
     output: {
         path: __dirname,
-        filename: "open.js"
+        filename: "index.js"
     },
     module: {
         loaders: [
@@ -15,11 +17,10 @@ module.exports = {
     resolve: {
         // 路径别名
         alias: {
-            '@Body' : path.resolve(__dirname, 'body/Body'),
-            '@Bone' : path.resolve(__dirname, 'body/Bone'),
-            '@Cell' : path.resolve(__dirname, 'body/Cell'),
-            '@Derma' : path.resolve(__dirname, 'body/Derma'),
-            '@Organ' : path.resolve(__dirname, 'body/Organ'),
+			'@CORE' : path.resolve(__dirname, 'core'),
+            '@BASE' : path.resolve(__dirname, 'core/base'),
+            '@LIB' : path.resolve(__dirname, 'core/lib'),
+            '@PLUG' : path.resolve(__dirname, 'core/plug'),
         }
     }
     // { test:/\.html$/,loader:'raw'},

@@ -1,0 +1,3 @@
+[submodule "pubjs"]
+	path = pubjs
+	url = git@git.server:aio/pubjs.git
