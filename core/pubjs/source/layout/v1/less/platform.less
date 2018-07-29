@@ -1,0 +1,502 @@
+html {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+body {
+	// padding-top: 50px;
+	min-width: 1200px;
+}
+
+.appScenesMain {
+	background: #fff;
+	#SCENES_MAIN {
+		display: block;
+	}
+	#SCENES_POPUP {
+		display: block;
+		z-index: 103;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.appScenesLogin {
+	#SCENES_LOGIN {
+		display: block;
+	}
+
+	&Main {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		width: 500px;
+		height: 400px;
+		margin-top: -200px;
+		margin-left: -250px;
+	}
+}
+
+.appScenesPopGrid {
+	#SCENES_POPGRID {
+		display: block;
+		z-index: 103;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: rgba(0,0,0,0.3);
+	}
+
+	.appScenesMain;
+}
+
+.appScenesPop {
+	#SCENES_POP {
+		display: block;
+		z-index: 103;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		// background: rgba(0,0,0,0.3);
+
+	}
+
+	.appScenesMain;
+}
+
+.dialog-open {
+	overflow-y: hidden !important;
+}
+
+.G-frameScenes {
+	display: none;
+}
+
+.G-frame {
+
+	&Head {
+		z-index: 101;
+		margin-bottom: 0;
+		min-height: 50px;
+		border: none;
+		width: 100%;
+		min-width: 600px;
+		height: 50px;
+		position: relative;
+
+		&Title {
+			position: absolute;
+			top: 0px;
+			left: 172px;
+
+			.nav-menu-collapse {
+				width: 50px;
+				height: 50px;
+				color: #ccc;
+				font-size: 20px;
+				position: relative;
+				float: left;
+
+				>i {
+					display: inline-block;
+					cursor: pointer;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-left: -9px;
+					margin-top: -7px;
+				}
+				.on {
+
+				}
+				.off {
+					display: none;
+				}
+			}
+			.nav-menu-title {
+				font-size: 19px;
+				float: left;
+				line-height: 50px;
+				height: 50px;
+				a {
+					font-size: 13px;
+					letter-spacing: 0.05em;
+					margin-left: 15px;
+					vertical-align: -2px;
+				}
+				span {
+					margin-right: 10px;
+					display: inline-block;
+					vertical-align: top;
+				}
+			}
+		}
+
+
+
+		&.head-menu-expanded {
+		}
+
+		&.head-menu-collapsed {
+			.G-frameHeadTitle {
+				left: 72px;
+				.nav-menu-collapse {
+					.on {
+						display: none;
+					}
+					.off {
+						display: block;
+					}
+
+				}
+			}
+		}
+	}
+
+	&Body {
+
+		&.body-menu-expanded {
+			padding-left: 160px;
+
+			.G-frameBodyMenu {
+				width: 160px;
+			}
+		}
+		&.body-menu-collapsed {
+			padding-left: 60px;
+
+			.G-frameBodyMenu {
+				width: 60px;
+				.nav-menu-logo {
+					.small {
+						display: none;
+					}
+					.smaller {
+						display: block;
+					}
+				}
+				.nav-menu {
+					.M-nav {
+						&Group {
+							>li {
+								text-align: center;
+								>a {
+									>i {
+										margin-left: 0;
+										margin-bottom: 5px;
+										display: block;
+									}
+									>span {
+										padding-left: 0;
+									}
+									>.name {
+										display: none;
+									}
+									>.alias {
+										display: block;
+									}
+								}
+
+								.subGroup {
+									>li {
+										>a {
+											padding-left: 0px;
+											text-indent: 0px;
+											>i {
+												margin-right: 0px;
+											}
+											>.name {
+												display: none;
+											}
+											>.alias {
+												display: inline-block;
+											}
+										}
+									}
+								}
+								.hasSubIcon {
+									right: 4px;
+									font-size: 14px;
+									top: auto;
+									bottom: 11px;
+								}
+							}
+						}
+					}
+					.M-navAdd {
+						display: none;
+					}
+				}
+				.nav-menu-switch {
+					width: 60px;
+					bottom: 0px;
+					.M-switch {
+						li {
+							a {
+								i{
+									display: block;
+									margin-bottom: 5px;
+									margin-right: 0px;
+								}
+								.name {
+									display: none;
+								}
+								.alias {
+									display: block;
+								}
+							}
+						}
+					}
+				}
+				.nav-menu-footer {
+					display: none;
+					width: 0;
+					padding: 0;
+				}
+				.nav-menu-collapse-toggle {
+					.left {
+						display: none;
+					}
+					.right {
+						display: block;
+					}
+				}
+				.nav-menu-collapse {
+					&.angle {
+						&:hover {
+							>a {
+								border-color: transparent transparent transparent #ffffff;
+							}
+						}
+						.nav-menu-collapse-toggle {
+							border-color: transparent transparent transparent #999999;
+							left: 4px;
+						}
+					}
+				}
+			}
+		}
+		&.body-mobile-state {
+			.G-frameBodyMenu {
+				min-height: 800px;
+				position: absolute;
+				.nav-menu-switch {
+					position: absolute;
+				}
+				.nav-menu-footer {
+					position: absolute;
+				}
+			}
+		}
+
+		&Menu {
+			-webkit-font-smoothing: auto;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			height: 100%;
+			transition-duration: .3s;
+			width: 160px;
+			z-index: 101;
+			background: #162327;
+
+			.nav-menu-logo {
+				height: 50px;
+				width: 100%;
+				overflow: hidden;
+			}
+			.nav-menu {
+				margin-top: 15px;
+				padding-bottom: 150px;
+				height: 100%;
+			}
+			.nav-menu-switch {
+				background: #000;
+				color: #444;
+				position: fixed;
+				bottom: 0px;
+				width: 160px;
+				overflow: hidden;
+				// transition-duration: .3s;
+				z-index: 102;
+			}
+			.nav-menu-footer {
+				display: none !important;
+				background: #000;
+				color: #444;
+				position: fixed;
+				bottom: 0;
+				width: 160px;
+				padding: 10px 0px;
+				overflow: hidden;
+				// transition-duration: .3s;
+				z-index: 102;
+				text-align: center;
+			}
+		}
+
+		&Content {
+			width: 100%;
+			padding: 20px 28px 20px 28px;
+			background: #FFF;
+
+			.body-sidebar-expanded {
+				// padding-right: 200px;
+
+			}
+			.body-sidebar-collapsed {
+				padding-right: 0;
+
+				.G-frameBodySidebar {
+					// right: -200px;
+					right: 0;
+					width: 0;
+					.M-sidebarWrap {
+						width: 0;
+					}
+
+					.sidebar-collapse-toggle {
+						.left {
+							display: block;
+						}
+						.right {
+							display: none;
+						}
+					}
+
+					.sidebar-collapse {
+						&.angle {
+							&:hover {
+								>a {
+									border-color: transparent #132124 transparent transparent;
+								}
+							}
+							.sidebar-collapse-toggle {
+								border-color: transparent #999999 transparent transparent;
+								left: -2px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&Sidebar {
+			position: absolute;
+			z-index: 101;
+			background: #fff;
+			transition-duration: .3s;
+			display: none;
+			left: 0px;
+			top: 0px;
+			width: 650px;
+			// height: 480px;
+			border-radius: 0px;
+			border: 1px solid #ccc;
+			box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.1);
+		}
+
+		.M-formHeadTitle {
+			position: absolute;
+			top: 10px;
+			z-index: 103;
+			margin-left: 35px;
+		}
+		.M-commonListHeaderTitle {
+			position: absolute;
+			top: 15px;
+			z-index: 103;
+			margin-left: 35px;
+		}
+		.M-commonFormHeaderTitle {
+			position: absolute;
+			top: 15px;
+			z-index: 103;
+			margin-left: 35px;
+		}
+	}
+
+	&PopGridOpenBtn {
+		position: fixed;
+		// position: absolute;
+		right: 30px;
+		bottom: 20px;
+		z-index: 105;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		font-size: 18px;
+		color: #fff;
+		background: #999;
+		border-radius: 50%;
+		cursor: pointer;
+		&:hover {
+			background: #666;
+			color: #fff;
+		}
+	}
+}
+
+.M-containerSidebar {
+	&.cool {
+		.G-frameBodyTab {
+			li {
+				font-size: 14px;
+				text-align: center;
+				a {
+					margin: 0px;
+					padding: 8px 40px;
+					border: none;
+					border-bottom: 2px solid transparent;
+				}
+			}
+			.active {
+				a {
+					border-bottom-color: #1F5AA3;
+				}
+			}
+		}
+	}
+	&.hot {
+		.G-frameBodyTab {
+			li {
+				font-size: 14px;
+				text-align: center;
+				a {
+					margin: 0px;
+					padding: 8px 40px;
+					border: none;
+					border-bottom: 2px solid transparent;
+					color: #333;
+				}
+			}
+			.active {
+				a {
+					border-bottom-color: #D31D20;
+					color: #D31D20;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1200px) {
+
+	html {
+		overflow-x: auto;
+	}
+	.G-frameBodyMenu {
+		// position: absolute;
+		.nav-menu-switch {
+			// position: absolute;
+		}
+	}
+}
