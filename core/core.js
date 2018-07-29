@@ -5,7 +5,8 @@ import {Base} from "@BASE/Base"
 import {bLog} from '@LIB/bLog'
 import {bUtil} from '@LIB/bUtil'
 import {eProxy} from "@LIB/eProxy";
-import {Module} from "@LIB/Module";
+import {Module} from "@BASE/Module";
+import {Message} from "@CORE/base/Message";
 class Core extends Base{
     constructor(config){
         super(config)
@@ -21,20 +22,25 @@ class Core extends Base{
     get butil() {
         return bUtil.init(this.config);
     }
+    get Module() {
+        return Module;
+    }
     //使用工厂模式加载插件
 }
-let Core = new Core();
+let CoreMod = new Core();
 // 代理
-Core = new eProxy(Core, {
-    get: function (target, key, receiver) {
-        console.log(`getting ${key}!`);
-        // console.log(target, key, receiver)
-        return Reflect.get(target, key, receiver);
-    },
-    set: function (target, key, value, receiver) {
-        console.log(`setting ${key}!`);
-        // console.log('set',target, key, receiver)
-        return Reflect.set(target, key, value, receiver);
-    }
-})
-export {Core};
+// CoreMod = new eProxy(CoreMod, {
+//     get: function (target, key, receiver) {
+//         // console.log(`getting ${key}!`);
+//         // console.log(target, key, receiver)
+//         return Reflect.get(target, key, receiver);
+//     },
+//     set: function (target, key, value, receiver) {
+//         // console.log(`setting ${key}!`);
+//         // console.log('set',target, key, receiver)
+//         return Reflect.set(target, key, value, receiver);
+//     }
+// });
+
+
+export default CoreMod;

@@ -1,28 +1,39 @@
 {
-  "name": "mjs",
-  "version": "1.0.0",
-  "babel":{
-    "presets": [
-      "es2015",
-      "react",
-      "stage-2"
-    ],
-    "presets": ["es2015"]
-  },
-  "description": "mjs is web frame",
-  "main": "index.js",
-  "scripts": {
-    "test": "npm install",
-    "start": "webpack --config webpack.config.js",
-    "watch": "webpack --progress --colors --watch"
-  },
-  "author": "mjproc,jj",
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
-    "webpack": "^3.5.5",
-    "apidoc": "^0.17.6"
-  },
-  "license": "ISC"
+	"name": "mjs",
+	"version": "1.0.0",
+	"babel": {
+		"presets": [
+			"es2015",
+			"react",
+			"stage-2"
+		],
+		"presets": [
+			"es2015"
+		]
+	},
+	"description": "mjs is web frame",
+	"main": "index.js",
+	"scripts": {
+		"npm install": "npm install",
+		"start": "webpack --config webpack.config.js",
+		"watch": "webpack --progress --colors --watch",
+		"apidoc": "apidoc -i core -o apidocMjp/ [-c ./] -f .*"
+	},
+	"author": "mjproc,jj",
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"babel-preset-es2015": "^6.24.1",
+		"webpack": "^3.5.5",
+		"apidoc": "^0.17.6"
+	},
+	"license": "ISC",
+	"apidoc":{
+		"name": "Mjs",
+		"private": true,
+		"version": "0.1.0",
+		"description": "pubjs前端es6重构api",
+		"title": "mjp-es重构pubjs",
+		"url" : ""
+	}
 }

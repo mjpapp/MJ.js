@@ -12,6 +12,6 @@ node_modules/
 .idea
 
 #open.js这个需要自己编译
-open.js
+index.js
 Body/Derma/
 Body/Organ/

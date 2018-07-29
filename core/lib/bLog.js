@@ -1,10 +1,10 @@
 /**
  * 系统日志函数
  */
-import {Base} from "@Bone/../../../core/base/Base"
+import {Base} from "@BASE/Base"
 class BLog extends Base {
 	constructor(config) {
-		super();
+		super(config);
 		this.con = window.console || {};
 		this.config = config;
 		this.style = {
@@ -23,10 +23,6 @@ class BLog extends Base {
 
 	log() {
 		// 输出调用栈 和 对象
-		console.log("======调试Log.config=====\n")
-		console.log('textLog.config:' + JSON.stringify(BLog.config) + "\n");
-		console.log("======结束Log.config=====\n");
-
 		let con = this.con || window.console;
 		if (con.log && this.getConfigByName('debug') > 0) {
 			if (con.groupCollapsed) {
