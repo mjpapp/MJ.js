@@ -1,0 +1,1 @@
+{  "name": "Mjs",  "private": true,  "version": "0.1.0",  "description": "pubjs前端es6重构api",  "title": "mjp-es重构pubjs",  "url": "",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2018-07-29T12:08:25.201Z",    "url": "http://apidocjs.com",    "version": "0.17.6"  }}
