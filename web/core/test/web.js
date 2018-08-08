@@ -1,4 +1,4 @@
-const Core = require('./core/core');
+const Core = require('core/core');
 Core.init(
     {
         Log: {
